@@ -34,7 +34,7 @@ print(f'Number of images in the folder: {len(listOfFingersImgs)}')
 
 while True:
     success, img = cap.read()
-    img = detector.findHands(img)
+    img = detector.findHands(img, draw=False)
     lmList = detector.findPosition(img, draw=False)
 
     if len(lmList) != 0:
